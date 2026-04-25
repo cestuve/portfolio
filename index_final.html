@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Claire E. Stuve, PhD | Portfolio</title>
+
+  <style>
+    :root {
+      --navy: #202a36;
+      --teal: #2bb3a3;
+      --coral: #ff7f6e;
+      --gold: #f9c74f;
+      --cream: #fff8ec;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(135deg, #fff8ec, #e8f7f5);
+      color: var(--navy);
+      line-height: 1.6;
+    }
+
+    .page {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    .card {
+      max-width: 900px;
+      width: 100%;
+      background: var(--white);
+      border-radius: 28px;
+      box-shadow: 0 18px 45px rgba(32, 42, 54, 0.18);
+      overflow: hidden;
+      border: 6px solid var(--gold);
+    }
+
+    .hero {
+      background: linear-gradient(135deg, var(--navy), #33465c);
+      color: var(--white);
+      padding: 48px 36px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+    }
+
+    .hero p {
+      margin-top: 12px;
+      font-size: 1.15rem;
+      color: #fceec4;
+    }
+
+    .content {
+      padding: 36px;
+    }
+
+    .about {
+      font-size: 1.05rem;
+      background: #fff3e8;
+      border-left: 8px solid var(--coral);
+      padding: 24px;
+      border-radius: 18px;
+      margin-bottom: 32px;
+    }
+
+    .section-title {
+      font-size: 1.6rem;
+      margin-bottom: 18px;
+      text-align: center;
+    }
+
+    .links {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .portfolio-link {
+      display: block;
+      text-decoration: none;
+      background: linear-gradient(135deg, var(--teal), #48c7b7);
+      color: white;
+      padding: 28px;
+      border-radius: 22px;
+      font-weight: bold;
+      font-size: 1.2rem;
+      text-align: center;
+      box-shadow: 0 10px 22px rgba(43, 179, 163, 0.28);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .portfolio-link:nth-child(2) {
+      background: linear-gradient(135deg, var(--coral), #ff9d7f);
+    }
+
+    .portfolio-link:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 16px 30px rgba(32, 42, 54, 0.22);
+    }
+
+    .footer {
+      text-align: center;
+      padding: 24px;
+      font-size: 0.95rem;
+      color: #5d6773;
+      background: #f7fbfa;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+    <section class="card">
+
+      <header class="hero">
+        <h1>Claire E. Stuve, PhD</h1>
+        <p>Learning Experience Design Portfolio</p>
+      </header>
+
+      <div class="content">
+
+        <section class="about">
+          <p>
+            I am passionate about creating learning experiences that truly resonate, and I believe everyone deserves an opportunity to engage with education in a way that feels meaningful and inspiring. For the past 17 years, I have been deeply immersed in learning science, specializing in designing and delivering high-quality online courses. What drives me is simple: I want every learner to walk away from an online course feeling empowered, fulfilled, and thinking, “That was the most engaging learning experience I have ever had.”
+          </p>
+        </section>
+
+        <h2 class="section-title">Portfolio Examples</h2>
+
+        <section class="links">
+          <a class="portfolio-link" href="https://cestuve.github.io/kidney" target="_blank">
+            Kidney Course Example
+          </a>
+
+          <a class="portfolio-link" href="https://cestuve.github.io/joseph" target="_blank">
+            Joseph Lesson Example
+          </a>
+        </section>
+
+      </div>
+
+      <footer class="footer">
+        Designed to showcase engaging, learner-centered online education
+      </footer>
+
+    </section>
+  </main>
+</body>
+</html>
