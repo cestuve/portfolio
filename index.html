@@ -2,58 +2,47 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Claire E. Stuve, PhD | Learning Experience Design Portfolio</title>
 
   <style>
     :root {
       --navy: #202a36;
-      --navy-2: #2f3f53;
       --teal: #2bb3a3;
-      --mint: #d8f5ef;
       --coral: #ff7f6e;
-      --rose: #ffe3dc;
       --gold: #f9c74f;
-      --cream: #fff8ec;
       --ink: #1e2732;
-      --soft-gray: #eef3f3;
       --white: #ffffff;
-      --shadow: 0 28px 70px rgba(32, 42, 54, 0.22);
     }
 
     * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
 
     body {
       margin: 0;
-      min-height: 100vh;
-      font-family: Inter, ui-sans-serif, system-ui;
+      font-family: Inter, system-ui;
+      background: linear-gradient(135deg, #fff8ec, #ecfbf8, #fff0e9);
       color: var(--ink);
-      background: linear-gradient(135deg, #fff8ec 0%, #ecfbf8 48%, #fff0e9 100%);
     }
 
     .page {
       display: flex;
-      align-items: center;
       justify-content: center;
       padding: 40px 20px;
     }
 
-    .portfolio-shell {
-      width: min(1080px, 100%);
-    }
-
     .card {
-      background: rgba(255, 255, 255, 0.95);
+      width: 100%;
+      max-width: 1100px;
+      background: rgba(255,255,255,0.95);
       border-radius: 40px;
-      box-shadow: var(--shadow);
+      box-shadow: 0 28px 70px rgba(32,42,54,0.22);
       overflow: hidden;
     }
 
     .hero {
+      background: linear-gradient(115deg, #202a36, #2f3f53);
       color: white;
       padding: 70px 60px;
-      background: linear-gradient(115deg, #202a36, #2f3f53);
     }
 
     .hero h1 {
@@ -96,6 +85,33 @@
       color: white;
       text-decoration: none;
       min-height: 220px;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+      box-shadow: 0 18px 30px rgba(0,0,0,0.18);
+    }
+
+    .portfolio-link:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 30px 55px rgba(0,0,0,0.28);
+      filter: brightness(1.05);
+    }
+
+    .portfolio-link::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.15), transparent 40%);
+      opacity: 0;
+      transition: opacity 0.25s ease;
+    }
+
+    .portfolio-link:hover::after {
+      opacity: 1;
+    }
+
+    .portfolio-link.wolverine {
+      background: linear-gradient(135deg, #00274c, #ffcb05);
     }
 
     .portfolio-link.kidney {
@@ -106,19 +122,48 @@
       background: linear-gradient(135deg, #ff7f6e, #764d84);
     }
 
-    .portfolio-link.wolverine {
-      background: linear-gradient(135deg, #00274c, #ffcb05);
+    .tag {
+      position: relative;
+      display: inline-block;
+      padding: 6px 10px;
+      font-size: 0.7rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      z-index: 1;
+      width: fit-content;
     }
 
-    .tag {
-      font-size: 0.75rem;
-      font-weight: bold;
-      letter-spacing: 1px;
+    .tag::before {
+      content: "";
+      position: absolute;
+      top: -4px;
+      bottom: -4px;
+      left: -8px;
+      right: -8px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.2);
+      backdrop-filter: blur(8px);
+      z-index: -1;
+    }
+
+    .tag::after {
+      content: "";
+      position: absolute;
+      top: -6px;
+      bottom: -6px;
+      left: -10px;
+      right: -10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.08);
+      filter: blur(6px);
+      z-index: -2;
     }
 
     .link-title {
       font-size: 2rem;
       font-weight: bold;
+      line-height: 1.1;
     }
 
     .link-copy {
@@ -136,6 +181,11 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      transition: transform 0.25s ease;
+    }
+
+    .portfolio-link:hover .arrow {
+      transform: translateX(5px);
     }
 
     @media (max-width: 800px) {
@@ -148,46 +198,44 @@
 
 <body>
   <main class="page">
-    <div class="portfolio-shell">
-      <section class="card">
+    <section class="card">
 
-        <header class="hero">
-          <h1>Claire Stuve, PhD</h1>
-          <p>Creative, learner-centered online education built with story, strategy, accessibility, and measurable impact in mind</p>
-        </header>
+      <header class="hero">
+        <h1>Claire Stuve, PhD</h1>
+        <p>Creative, learner-centered online education built with story, strategy, accessibility, and measurable impact in mind</p>
+      </header>
 
-        <div class="content">
-          <h2 class="section-title">Explore the Examples</h2>
+      <div class="content">
+        <h2 class="section-title">Explore the Examples</h2>
 
-          <p class="section-note">
-            Selected interactive and presentation samples showcasing scenario-based learning, visual storytelling, and reflective design
-          </p>
+        <p class="section-note">
+          Selected interactive and presentation samples showcasing scenario-based learning, visual storytelling, and reflective design
+        </p>
 
-          <div class="links">
+        <div class="links">
 
-            <a class="portfolio-link wolverine" href="https://cestuve.github.io/wolverine" target="_blank">
-              <span class="tag">Presentation</span>
-              <span class="link-title">Wolverine vs. Buckeye</span>
-              <span class="link-copy">View the presentation <span class="arrow">→</span></span>
-            </a>
+          <a class="portfolio-link wolverine" href="https://cestuve.github.io/wolverine" target="_blank">
+            <span class="tag">Presentation</span>
+            <span class="link-title">Wolverine vs. Buckeye</span>
+            <span class="link-copy">View the presentation <span class="arrow">→</span></span>
+          </a>
 
-            <a class="portfolio-link kidney" href="https://cestuve.github.io/kidney" target="_blank">
-              <span class="tag">Clinical Learning</span>
-              <span class="link-title">Kidney Stones</span>
-              <span class="link-copy">View the course example <span class="arrow">→</span></span>
-            </a>
+          <a class="portfolio-link kidney" href="https://cestuve.github.io/kidney" target="_blank">
+            <span class="tag">Clinical Learning</span>
+            <span class="link-title">Kidney Stones</span>
+            <span class="link-copy">View the course example <span class="arrow">→</span></span>
+          </a>
 
-            <a class="portfolio-link joseph" href="https://cestuve.github.io/joseph_story/" target="_blank">
-              <span class="tag">Story-Driven Learning</span>
-              <span class="link-title">The Story of Joseph</span>
-              <span class="link-copy">View the lesson example <span class="arrow">→</span></span>
-            </a>
+          <a class="portfolio-link joseph" href="https://cestuve.github.io/joseph_story/" target="_blank">
+            <span class="tag">Story-Driven Learning</span>
+            <span class="link-title">The Story of Joseph</span>
+            <span class="link-copy">View the lesson example <span class="arrow">→</span></span>
+          </a>
 
-          </div>
         </div>
+      </div>
 
-      </section>
-    </div>
+    </section>
   </main>
 </body>
 </html>
